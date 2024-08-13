@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcuscroftntee"]
+
+[ext_resource type="Script" path="res://scripts/map.gd" id="1_83ncy"]
+[ext_resource type="FontFile" uid="uid://djefq4q7ev3bb" path="res://assets/fonts/PixelOperator8.ttf" id="2_bopgy"]
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_83ncy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -181.0
+offset_top = -297.0
+offset_right = 179.0
+offset_bottom = -265.0
+theme_override_fonts/font = ExtResource("2_bopgy")
+theme_override_font_sizes/font_size = 32
+text = "Level Selector"
+
+[node name="Level1" type="Button" parent="Camera2D"]
+offset_left = -172.0
+offset_top = -36.0
+offset_right = -102.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("2_bopgy")
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="Level2" type="Button" parent="Camera2D"]
+offset_left = 96.0
+offset_top = -36.0
+offset_right = 166.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("2_bopgy")
+theme_override_font_sizes/font_size = 40
+text = "2
+"
+
+[connection signal="pressed" from="Camera2D/Level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Camera2D/Level1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera2D/Level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Camera2D/Level2" to="." method="_on_button_pressed"]

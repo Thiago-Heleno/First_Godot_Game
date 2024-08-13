@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://8fkulobglh4w"]
+
+[ext_resource type="Texture2D" uid="uid://c0bdourn4c635" path="res://assets/sprites/pixil-frame-0.png" id="1_7vlnr"]
+[ext_resource type="FontFile" uid="uid://djefq4q7ev3bb" path="res://assets/fonts/PixelOperator8.ttf" id="2_c10c7"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 42.0
+offset_top = 583.0
+offset_right = 82.0
+offset_bottom = 623.0
+texture = ExtResource("1_7vlnr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 979.0
+offset_top = 605.0
+offset_right = 1105.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("2_c10c7")
+theme_override_font_sizes/font_size = 24
+text = "Coins: 0"
